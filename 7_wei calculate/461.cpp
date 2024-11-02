@@ -2,7 +2,7 @@
 #include <vector>
 #include <math.h>
 
-// 461 //!异或特性：可以保留两方中仅有一方有的部分
+// 461 //! 异或特性：可以保留两方中仅有一方有的部分
 int hammingDistance(int x, int y)
 {
     // 1
@@ -11,7 +11,7 @@ int hammingDistance(int x, int y)
     // 2
     //  int s=x^y,ret=0;
     //  while(s) {
-    //      ret=ret+(s&1);//!s&1可得到最低位的值
+    //      ret=ret+(s&1);//! s&1可得到最低位的值
     //      s=s>>1;
     //  }
     //  return ret;
@@ -66,7 +66,7 @@ std::vector<int> get_2(int n)
     return vec;
 }
 
-// 1318 //!或的特性 or的数越多，结果越大
+// 1318 //! 或的特性 or的数越多，结果越大
 int minFlips(int a, int b, int c)
 {
     int res = 0;
@@ -89,7 +89,7 @@ int minFlips(int a, int b, int c)
     }
 }
 
-// 2419 //!与的特性，与的结果小于等于作与的最大值 and的数越多，结果越小
+// 2419 //! 与的特性，与的结果小于等于作与的最大值 and的数越多，结果越小
 int LongestSubNum(int nums[], int size)
 {
     // int ret=0;
@@ -108,7 +108,7 @@ int LongestSubNum(int nums[], int size)
     }
 
     int ans = 0;
-    int res = 0; // !利用遍历的天然有序性得到该值连续出现的最大次数
+    int res = 0; //! 利用遍历的天然有序性得到该值连续出现的最大次数
     for (int i = 0; i < size; ++i)
     {
         if (nums[i] == max_num)
