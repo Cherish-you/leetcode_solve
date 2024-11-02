@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "_1010.cpp",
+                // "-I",
+                // "${workspaceFolder}/include",
+                // "${workspaceFolder}/lib",
+                // "${workspaceFolder}bin",
+                // "-L",
+                // "${workspaceFolder}/lib",
+                // "-l",
+                // "a_Sum of two numbers",
+                "-std=c++17",
+                "-o",
+                "${fileBasenameNoExtension}"
+            ]
+        }
+    ]
+}
