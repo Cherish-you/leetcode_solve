@@ -48,7 +48,7 @@ void permutation(vector<int> &vec, vector<vector<int>> &ans)
 }
 
 /*
-可重复的全排列
+可重复的全排列,所用数组不需有序
 */
 void dup_permutation(vector<int> &vec, vector<int> &path, vector<vector<int>> &ans, vector<int> &visited, int i)
 {

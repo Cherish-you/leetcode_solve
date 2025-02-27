@@ -1,5 +1,5 @@
 #include <iostream>
-//todo 有些许不解，但类比暴力的i，j的变化 可知是先计数再更新
+// todo 有些许不解，但类比暴力的i，j的变化 可知是先计数再更新
 
 int gcd(int a, int b)
 {

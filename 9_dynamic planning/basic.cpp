@@ -2,6 +2,35 @@
 #include <vector>
 
 using namespace std;
+
+/*动态规划：
+一.先写递归式（要全面穷举所有的后继状态）
+1.确定函数意义，问题中变化的量是关键
+2.dp(状态1, 状态2):
+    出口
+    ...
+
+    for 选择 in 所有可能的选择:
+        # 此时的状态已经因为做了选择而改变
+        result = 求最值(result, dp(状态1, 状态2))
+    return result
+
+3.出口：问题已经不能向下分解，是以当前函数的视角写的，单独罗列各种的再尝试完善：
+if (i < 0) {//无可选元素
+    return N == 0 ? 0 : -1e9; // 如果容量为0返回0，否则返回一个不可能的低值
+}
+if (N < 0) {//有可选元素但是超过容量限制
+    return -1e9; // 返回一个不可能的低值,表示此路径无效
+}
+if(N==0)
+    return 0;
+
+
+二.改动态规划
+函数变数组，状态变为数组维度，状态个数为数组个数，依据出口给数组设定计算起点
+比如下面，根据递归式，应该有nums.size()+2个状态；根据出口return 0，计算入口就是dp[0]=dp[1]=0;
+*/
+
 //*解决选择与不选择的决策问题，这个的子问题和函数定义都是类似的
 
 // 题目：给定一个数组，求最大子序列和，且子序列中不能相邻
@@ -71,19 +100,18 @@ public:
         {
             return 0;
         }
-        if(amount < 0)
+        if (amount < 0)
         {
             return -1;
         }
 
         int ans = INT_MAX;
-        for(int i=0;i<coins.size();++i)
+        for (int i = 0; i < coins.size(); ++i)
         {
-            ans=1+min(ans,coinChange(coins,amount-coins[i]));
+            ans = 1 + min(ans, coinChange(coins, amount - coins[i]));
         }
-        
-        return ans;
 
+        return ans;
     }
 };
 
