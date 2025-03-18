@@ -90,9 +90,11 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
     },
     "git.enableStatusBarSync": true,
     "gitlens.graph.showDetailsView": "selection",
     "gitlens.currentLine.enabled": false
 }
+//测试一下分支合并遇到的冲突
+//哈哈哈
